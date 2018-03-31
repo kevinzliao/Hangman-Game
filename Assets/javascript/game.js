@@ -25,18 +25,18 @@ $(document).ready(function() {
     $("#curArray").text(dispArray);
     
     function reset() {
-        var guess = 6;
-        var imgIndex = 0;
+        guess = 6;
+        imgIndex = 0;
         $("#hangman").attr('src', 'Assets/images/img' + imgIndex + '.png');
         $("#guessRemaining").text("You have "+guess+" guess(es) remaining!");
     
         //randomly select animal from array for current round
         curAnimal = animals[Math.floor(Math.random() * animals.length)];
         console.log(curAnimal);
-        var blankArray = [];
-        var usedLetters = [];
-        $("#usedLetters").text(uJoin);
-        
+        blankArray = [];
+        usedLetters = [];
+        $("#usedLetters").text("");
+           
         for (i = 0; i < curAnimal.length; i++) {
             blankArray.push("_");
         }
@@ -86,8 +86,8 @@ $(document).ready(function() {
         }
 
         if (!correctGuess) {
-            guess--;
-            imgIndex++;
+            guess-=1;
+            imgIndex+=1;
         }
 
 
