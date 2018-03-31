@@ -3,8 +3,8 @@ $(document).ready(function() {
     var wins = 0;
     $("#wins").text(wins);
  
-    //list of potential animals
-    var animals = ["cheetah", "zebra", "lion", "giraffe", "elephant", "gazelle"];
+    //list of safari animals
+    var animals = ["cheetah", "zebra", "lion", "giraffe", "elephant", "gazelle", "hippopotamus", "rhinoceros", "crocodile"];
 
 
     var guess = 6;
@@ -24,6 +24,7 @@ $(document).ready(function() {
     console.log(blankArray);    
     $("#curArray").text(dispArray);
     
+    //function to reset game variables after every round
     function reset() {
         guess = 6;
         imgIndex = 0;
